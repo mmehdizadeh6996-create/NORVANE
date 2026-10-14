@@ -174,6 +174,12 @@ p{margin:0}
 .section{padding:64px 0}
 .section-head{display:grid;gap:14px;margin-bottom:34px;max-width:64ch}
 .section-alt{background:var(--surface);border-block:1px solid var(--line)}
+.about-grid{display:grid;gap:34px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
+.about-stats div{background:var(--surface);padding:22px 18px}
+.about-stats strong{display:block;font-family:var(--font-display);font-stretch:118%;font-size:1.9rem;color:var(--flame);line-height:1}
+.about-stats span{display:block;margin-top:6px;font-size:.85rem;color:var(--muted)}
+@media (max-width:640px){.about-stats{grid-template-columns:1fr}}
 @media (min-width:860px){.section{padding:96px 0}}
 
 /* Output scale */
@@ -322,6 +328,7 @@ form{display:grid;gap:16px}
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#fleet" data-i18n="navTurbines">Turbines</a>
+      <a href="#about" data-i18n="navAbout">About</a>
       <a href="#services" data-i18n="navServices">Services</a>
       <a href="#process" data-i18n="navProcess">How it works</a>
       <a href="#faq" data-i18n="navFaq">FAQ</a>
@@ -381,6 +388,20 @@ form{display:grid;gap:16px}
         <li><span class="num" aria-hidden="true">4</span><strong data-i18n="stage4Title">Exhaust</strong><span data-i18n="stage4Desc">Heat leaves, or is recovered</span></li>
       </ul>
     </figure>
+  </div>
+</section>
+
+<section class="section section-alt" id="about">
+  <div class="wrap about-grid">
+    <div class="section-head">
+      <h2 data-i18n="aboutTitle">Supplying gas turbines professionally since 2005.</h2>
+      <p class="lead" data-i18n="aboutLead">Norvane Power Systems has worked professionally in the supply and sale of industrial gas turbines and generator sets since 2005, including the Siemens SGT-400, SGT-600 and SGT-800 and GE Frame 5 and Frame 9 ranges featured on this site. Over two decades we have built a track record of sourcing dependable, well-documented equipment for power plants, oil and gas sites and cogeneration projects worldwide.</p>
+    </div>
+    <div class="about-stats">
+      <div><strong>2005</strong><span data-i18n="aboutStat1">Active in the turbine trade since</span></div>
+      <div><strong>5</strong><span data-i18n="aboutStat2">Turbine models in our current range</span></div>
+      <div><strong>Hamburg</strong><span data-i18n="aboutStat3">Headquartered in Germany</span></div>
+    </div>
   </div>
 </section>
 
@@ -624,6 +645,12 @@ form{display:grid;gap:16px}
   // Bilingual EN / DE content
   var i18n={
     navTurbines:{en:"Turbines",de:"Turbinen"},
+    navAbout:{en:"About",de:"Über uns"},
+    aboutTitle:{en:"Supplying gas turbines professionally since 2005.",de:"Seit 2005 professionelle Lieferung von Gasturbinen."},
+    aboutLead:{en:"Norvane Power Systems has worked professionally in the supply and sale of industrial gas turbines and generator sets since 2005, including the Siemens SGT-400, SGT-600 and SGT-800 and GE Frame 5 and Frame 9 ranges featured on this site. Over two decades we have built a track record of sourcing dependable, well-documented equipment for power plants, oil and gas sites and cogeneration projects worldwide.",de:"Norvane Power Systems ist seit 2005 professionell in der Beschaffung und dem Verkauf von Industriegasturbinen und Generator-Sets tätig, einschließlich der auf dieser Seite gezeigten Baureihen Siemens SGT-400, SGT-600 und SGT-800 sowie GE Frame 5 und Frame 9. Über zwei Jahrzehnte haben wir uns einen Ruf für die Beschaffung zuverlässiger, gut dokumentierter Anlagen für Kraftwerke, Öl- und Gasanlagen sowie KWK-Projekte weltweit aufgebaut."},
+    aboutStat1:{en:"Active in the turbine trade since",de:"Aktiv im Turbinenhandel seit"},
+    aboutStat2:{en:"Turbine models in our current range",de:"Turbinenmodelle in unserem aktuellen Programm"},
+    aboutStat3:{en:"Headquartered in Germany",de:"Hauptsitz in Deutschland"},
     navServices:{en:"Services",de:"Leistungen"},
     navProcess:{en:"How it works",de:"Ablauf"},
     navFaq:{en:"FAQ",de:"FAQ"},
