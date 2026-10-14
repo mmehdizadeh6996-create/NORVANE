@@ -175,11 +175,17 @@ p{margin:0}
 .section-head{display:grid;gap:14px;margin-bottom:34px;max-width:64ch}
 .section-alt{background:var(--surface);border-block:1px solid var(--line)}
 .about-grid{display:grid;gap:34px}
+.about-lead{text-align:justify;text-justify:inter-word}
 .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
 .about-stats div{background:var(--surface);padding:22px 18px}
 .about-stats strong{display:block;font-family:var(--font-display);font-stretch:118%;font-size:1.9rem;color:var(--flame);line-height:1}
 .about-stats span{display:block;margin-top:6px;font-size:.85rem;color:var(--muted)}
 @media (max-width:640px){.about-stats{grid-template-columns:1fr}}
+@media (min-width:860px){
+  .about-grid{grid-template-columns:1.25fr .85fr;align-items:center;gap:48px}
+  .about-grid .section-head{max-width:none}
+  .about-stats{grid-template-columns:1fr;align-content:center;height:100%}
+}
 @media (min-width:860px){.section{padding:96px 0}}
 
 /* Output scale */
@@ -395,7 +401,7 @@ form{display:grid;gap:16px}
   <div class="wrap about-grid">
     <div class="section-head">
       <h2 data-i18n="aboutTitle">Supplying gas turbines professionally since 2005.</h2>
-      <p class="lead" data-i18n="aboutLead">Norvane Power Systems has worked professionally in the supply and sale of industrial gas turbines and generator sets since 2005, including the Siemens SGT-400, SGT-600 and SGT-800 and GE Frame 5 and Frame 9 ranges featured on this site. Over two decades we have built a track record of sourcing dependable, well-documented equipment for power plants, oil and gas sites and cogeneration projects worldwide.</p>
+      <p class="lead about-lead" data-i18n="aboutLead">Norvane Power Systems has worked professionally in the supply and sale of industrial gas turbines and generator sets since 2005, including the Siemens SGT-400, SGT-600 and SGT-800 and GE Frame 5 and Frame 9 ranges featured on this site. Over two decades we have built a track record of sourcing dependable, well-documented equipment for power plants, oil and gas sites and cogeneration projects worldwide.</p>
     </div>
     <div class="about-stats">
       <div><strong>2005</strong><span data-i18n="aboutStat1">Active in the turbine trade since</span></div>
